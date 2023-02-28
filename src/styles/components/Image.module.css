@@ -1,0 +1,85 @@
+.image{
+    width: 100%;
+    max-width: 850px;
+    height: 500px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 12px;
+    margin: 25px 0;
+    box-shadow: 0 0 12px #546278;
+    transition: 0.4s ease-in-out;
+    cursor: pointer;
+    position: relative;
+}
+.action{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    opacity: 0;
+}
+.action ion-icon{
+    color: #dc2c2c;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.action ion-icon:hover{
+   opacity: 0.6;
+    transition: 0.3s ease-in-out;
+
+}
+.body{
+    border-radius: 12px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background: rgb(3,14,18);
+    background: linear-gradient(0deg, rgba(3,14,18,0.90) 0%, rgba(3,14,18,0) 100%);
+}
+a{
+    text-decoration: none;
+}
+.image:hover{
+    transform: scale(1.020);
+}
+.image:hover .body{
+    background: rgb(3,14,18);
+    background: linear-gradient(0deg, rgba(3,14,18,0.98) 0%, rgba(3,14,18,0) 100%);
+    transition: 0.3s ease-in-out;
+}
+.image:hover .action{
+    transition: 0.3s ease-in-out;
+    opacity: 1;
+}
+
+.footer{
+    width: 100%;
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:  15px 20px;
+}
+.footer ion-icon{
+    color: #dee7f1;
+    width: 46px;
+    height: 46px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.footer ion-icon:hover{
+    color: rgba(222, 231, 241, 0.6);
+    transition: 0.3s ease-in-out;
+    margin-bottom: 10px;
+
+}
+.description{
+    font-size: 24px;
+    color: #dee7f1;
+    font-weight: 700;
+    width: 80%;
+}

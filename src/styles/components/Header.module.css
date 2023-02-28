@@ -1,0 +1,45 @@
+.header{
+    width: 100%;
+    margin-bottom: 20px;
+}
+.body{
+    width: 100%;
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    color: #2a5799;
+    font-weight: 500;
+    cursor: pointer;
+}
+.logo  ion-icon{
+
+    color: #0f3f87;
+    width: 20px;
+    height: 20px;
+}
+.buttons{
+    display: flex;
+    align-items: center;
+}
+
+.buttons ion-icon{
+    color: #dee7f1;
+    width: 27px;
+    height: 27px;
+    margin: 0 7px;
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+.buttons ion-icon:hover{
+    color: rgba(222, 231, 241, 0.6);
+    transition: 0.3s linear;
+}
+.buttons ion-icon:nth-child(1){
+    padding-top: 4px;
+}

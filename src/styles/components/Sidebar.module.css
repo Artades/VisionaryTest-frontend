@@ -1,0 +1,44 @@
+/* Sidebar.module.css */
+.sidebar {
+
+    border-radius: 12px;
+    width: 60px;
+    height: 100%;
+    background-color: transparent;
+    box-shadow: 0 0 12px #546278;
+    display: grid;
+    grid-template-rows: 1fr auto;
+}
+
+.body {
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.links li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.links li ion-icon {
+    color:  #cbd5e0;
+    font-size: 24px;
+    transition: color 0.3s ease-in-out;
+}
+
+.links li:hover ion-icon {
+    color: #21467d;
+}
