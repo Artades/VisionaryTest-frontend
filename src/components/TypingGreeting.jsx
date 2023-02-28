@@ -9,15 +9,12 @@ export const TypingGreeting = ({ fullName }) => {
     useEffect(() => {
 
             const intervalId = setInterval(() => {
-                if( typeof(fullName === 'string')) {
-                    if (index < fullName.length) {
-                        setDisplayedGreeting(fullName.slice(0, index + 1));
-                        setIndex(index + 1);
-
-                    } else {
-                        setDisplayedGreeting(fullName);
-                        setIsTypingComplete(true);
-                    }
+                if (typeof fullName === 'string' && index < fullName.length) {
+                    setDisplayedGreeting(fullName.slice(0, index + 1));
+                    setIndex(index + 1);
+                } else {
+                    setDisplayedGreeting(fullName);
+                    setIsTypingComplete(true);
                 }
 
             }, 200);
