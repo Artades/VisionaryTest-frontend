@@ -16,19 +16,24 @@ console.log(userData)
     return (
         <div className={styles.images}>
             <div className={styles.imagesBody} style={{flexDirection: orderOfTheImages ? 'column-reverse' : 'column'}} >
+
                 {
+                    !Array.isArray(posts.items) ?
+
                     (arePostsLoading ? [...Array(posts.items.length) + 1] : posts.items).map((obj, index) =>
-                        arePostsLoading ?
-                            (<SkeletonImage key={index} />) :
-                            (<Image
-                                key={index}
-                                description={obj.description}
-                                imageUrl={obj.imageUrl}
-                                // user={obj.user}
-                                isEditable={userData?._id === obj.user._id}
-                                id={obj._id}
-                                />)
+                    arePostsLoading ?
+                    (<SkeletonImage key={index} />) :
+                    (<Image
+                    key={index}
+                    description={obj.description}
+                    imageUrl={obj.imageUrl}
+                    // user={obj.user}
+                    isEditable={userData?._id === obj.user._id}
+                    id={obj._id}
+                    />)
                     )
+                        :
+                        []
                 }
             </div>
         </div>

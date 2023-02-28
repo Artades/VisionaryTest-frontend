@@ -3,7 +3,7 @@ import styles from '../styles/components/Image.module.css'
 import {Link} from "react-router-dom";
 import {useDispatch} from "react-redux";
 import {fetchRemovePost} from "../redux/slices/posts";
-import {logout} from "../redux/slices/auth";
+
 const Image = ({description, imageUrl, id, isEditable}) => {
     const dispatch = useDispatch();
 
