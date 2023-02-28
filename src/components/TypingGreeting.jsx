@@ -7,19 +7,21 @@ export const TypingGreeting = ({ fullName }) => {
     const [isTypingComplete, setIsTypingComplete] = useState(false);
 
     useEffect(() => {
-        const intervalId = setInterval(() => {
-            if (index < fullName.length) {
-                setDisplayedGreeting(fullName.slice(0, index + 1));
-                setIndex(index + 1 );
 
-            }else if(fullName.length === 0) {
-                setDisplayedGreeting('Undefined')
-                setIndex(index + 1 );
-            } else {
-                setDisplayedGreeting(fullName);
-                setIsTypingComplete(true);
-            }
-        }, 200);
+            const intervalId = setInterval(() => {
+                if( typeof(fullName === 'string')) {
+                    if (index < fullName.length) {
+                        setDisplayedGreeting(fullName.slice(0, index + 1));
+                        setIndex(index + 1);
+
+                    } else {
+                        setDisplayedGreeting(fullName);
+                        setIsTypingComplete(true);
+                    }
+                }
+
+            }, 200);
+
 
         return () => clearInterval(intervalId);
     }, [index, fullName]);
