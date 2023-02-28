@@ -99,7 +99,7 @@ const CreateImage = () => {
                     <div className={styles.image}>
                         {
                             imageUrl ? (
-                                <img  src={`http://localhost:8888${imageUrl}`} alt="Preview"/>
+                                <img  src={`${process.env.REACT_APP_API_URL}${imageUrl}`} alt="Preview"/>
                             ) :
                                 <ion-icon name="document-attach-outline" />
                         }

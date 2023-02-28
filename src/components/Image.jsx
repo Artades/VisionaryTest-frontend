@@ -13,7 +13,7 @@ const Image = ({description, imageUrl, id, isEditable}) => {
      }
  }
     return (
-        <div className={styles.image} key={id} style={{backgroundImage: `url(http://localhost:8888${imageUrl})`}} >
+        <div className={styles.image} key={id} style={{backgroundImage: `${process.env.REACT_APP_API_URL}${imageUrl})`}} >
             <div className={styles.body}>
                 {
                     isEditable && (

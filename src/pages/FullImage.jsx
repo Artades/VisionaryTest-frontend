@@ -65,7 +65,7 @@ const FullImage = () => {
                         <SkeletonFull />
                     ) : (
                         <div className={styles.image}>
-                            <img src={`http://localhost:8888${imageUrl}`} alt="Full Size Image" />
+                            <img src={`${process.env.REACT_APP_API_URL}${imageUrl}`} alt="Full Size Image" />
                         </div>
                     )}
                     <div className={styles.info}>
